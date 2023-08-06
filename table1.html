@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .color {
+            background-color: rgb(14, 24, 115);
+            color: white
+        }
+
+        .aaaa {
+            background-color: green;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="button" onclick="selectDay('Monday')">Show Monday</button>
+    <button type="button" onclick="selectDay('Tuesday')">Show Tuesday</button>
+    <button type="button" onclick="selectDay('wednesday')">Show wednesday</button>
+    <button type="button" onclick="selectDay('thursday')">Show thursday</button>
+    <button type="button" onclick="selectDay('friday')">Show friday</button>
+    <button type="button" onclick="selectDay('saturday')">Show saturday</button>
+    <button type="button" onclick="selectDay('sunday')">Show sunday</button>
+
+    <p id="demo">This is a demonstration.</p>
+
+
+    <script src="js/hello.js">
+        function selectWeek(week) {
+            console.log(document.getElementById("Thoikhoabieu"))
+            alert(document.getElementById("Thoikhoabieu").title)
+            document.getElementById("Thoikhoabieu").value = week
+            //  alert(week)
+        }
+        function selectDay(day) {
+
+            if (day == "thursday") {
+                document.getElementById("ththursday").className = "color";
+            }
+            else {
+                document.getElementById("ththursday").className = "";
+            }
+
+
+            if (day == "wednesday") {
+                document.getElementById("thwednesday").className = "color";
+            }
+            else {
+                document.getElementById("thwednesday").className = "";
+            }
+
+            if (day == "saturday") {
+                document.getElementById("thsaturday").className = "color";
+            }
+            else {
+                document.getElementById("thsaturday").className = "";
+            }
+
+            if (day == "Tuesday") {
+                document.getElementById("thtuesday").className = "color";
+            }
+            else {
+                document.getElementById("thtuesday").className = "";
+            }
+
+
+            if (day == "Monday") {
+                document.getElementById("thmonday").className = "color";
+            }
+            else {
+                document.getElementById("thmonday").className = "";
+            }
+
+
+
+
+
+
+            document.getElementById("demo").innerHTML = "Hello " + day;
+
+        }
+        function selectDate(date) {
+
+            const d = new Date(date);
+            let year = d.getFullYear();
+
+            let day = d.getDate()
+
+            let month = d.getMonth();
+            document.getElementById("demo").innerHTML = 'this is day:' + day + 'this is month:' + month + 'this is year:' + year;
+        }
+        function getDaysInMonth(year, month) {
+            return new Date(year, month, 0).getDate();
+        }
+   
+
+
+
+
+
+
+
+
+
+
+
+        // function monday() {
+        //     document.getElementById("demo").innerHTML = "Hello Monday!";
+
+        // }
+
+        // function tuesday() {
+        //     document.getElementById("demo").innerHTML = "Hello tuesday!";
+
+        // }
+
+        // function wednesday() {
+        //     document.getElementById("demo").innerHTML = "Hello wednesday!";
+
+        // }
+        // function thursday() {
+        //     document.getElementById("demo").innerHTML = "Hello thursday!";
+
+        // }
+        // function friday() {
+        //     document.getElementById("demo").innerHTML = "Hello friday!";
+
+        // }
+        // function saturday() {
+        //     document.getElementById("demo").innerHTML = "Hello saturday!";
+
+        // }
+        // function sunday() {
+        //     document.getElementById("demo").innerHTML = "Hello sunday!";
+
+        // }
+
+
+        // Khai báo một mảng các số ngày của từng tháng
+        // const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        // Kiểm tra nếu là tháng 2 và năm là năm nhuận thì tháng 2 có 29 ngày
+        // if (month === 2 && ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)) {
+        //     return 29;
+        // }
+        // return monthDays[month];
+
+
+
+    </script>
+    <form action="/action_page.php">
+        <label for="time">Time:</label>
+        <input type="date" id="time" name="time">
+
+        <button type="button" onclick="WeekNumber(document.getElementById('time').value)">print</button>
+
+
+
+    </form>
+    </form>
+
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>Bootstrap Example</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+      </head>
+      <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    
+        <!-- Example Code -->
+        
+        
+        <button type="button" class="btn btn-primary" onclick="selectDay('Monday')">Show Monday</button>
+        <button type="button" class="btn btn-secondary" onclick="selectDay('Tuesday')" >Show tuesday</button>
+        <button type="button" class="btn btn-success"onclick="selectDay('wednesday')">Show wednesday</button>
+        <button type="button" class="btn btn-danger"onclick="selectDay('thursday')">Show thursday</button>
+        <button type="button" class="btn btn-warning"onclick="selectDay('friday')">Show friday</button>
+        <button type="button" class="btn btn-info"onclick="selectDay('saturday')">Show saturday</button>
+        <button type="button" class="btn btn-light"onclick="selectDay('sunday')">Show sunday</button>
+        
+        
+        <button type="button" class="btn btn-link">Link</button>
+        
+        <!-- End Example Code -->
+      </body>
+    </html>
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+        <title>Bootstrap Example</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+      </head>
+      <body class="p-3 m-0 border-0 bd-example m-0 border-0 bd-example-row">
+    
+        <!-- Example Code -->
+        
+        <div class="container text-center">
+          <div class="row row-cols-auto">
+            <div class="col"><button type="button" class="btn btn-primary" onclick="selectDay('Monday')">Show Monday</button></div>
+            
+          
+          </div>
+          <div class="row row-cols-auto">
+            <div class="col"><button type="button" class="btn btn-secondary" onclick="selectDay('Tuesday')" >Show tuesday</button></div>
+            
+          
+          </div>
+          <div class="row row-cols-auto">
+            <div class="col"> <button type="button" class="btn btn-success"onclick="selectDay('wednesday')">Show wednesday</button></div>
+            
+          
+          </div>
+          <div class="row row-cols-auto">
+            <div class="col"><button type="button" class="btn btn-danger"onclick="selectDay('thursday')">Show thursday</button></div>
+            
+          
+          </div>
+          <div class="row row-cols-auto">
+            <div class="col"><button type="button" class="btn btn-warning"onclick="selectDay('friday')">Show friday</button></div>
+            
+          
+          </div>
+          <div class="row row-cols-auto">
+            <div class="col"><button type="button" class="btn btn-info"onclick="selectDay('saturday')">Show saturday</button></div>
+            
+          
+          </div>
+          <div class="row row-cols-auto">
+            <div class="col"><button type="button" class="btn btn-light"onclick="selectDay('sunday')">Show sunday</button></div>
+            
+          
+          </div>
+        </div>
+        <!doctype html>
+
+
+
+
+
+    <label for="week">Choose a week:</label>
+    <select name="week" id="week" onchange="selectWeek(document.getElementById('week').value)">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+
+    </select>
+    <br><br>
+
+    <h1 id="Thoikhoabieu">Thời khoá biểu</h1>
+
+    <table>
+        <tr>
+            <th id="thtiet" style="width: 9%;">Tiết</th>
+            <th id="thmonday" style="width: 13%">monday</th>
+            <th id="thtuesday" style="width: 13%">tuesday</th>
+            <th id="thwednesday" style="width: 13%">wednesday</th>
+            <th id="ththursday" style="width: 13%">thursday</th>
+            <th id="thfriday" style="width: 13%">friday</th>
+            <th id="thsaturday" style="width: 13%">saturday</th>
+            <th id="thsunday" style="width: 13%">sunday</th>
+
+        </tr>
+        <tr>
+            <td>1-3</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>C22:
+                <p style="color:red;">Tiếng anh cơ bản 1</p>
+                Tiết: 1-4
+                <p style="color:blue;">GV: Bùi Thị Thảo Uyên</p>
+
+        </tr>
+        <tr>
+            <td>4-6</td>
+            <td>B37:
+                <p style="color:red;">Triết học Mác - Lênin</p>
+                Tiết: 4-6
+                <p style="color:blue;">GV: Biền Quốc Thắng</p>
+            </td>
+            <td>B37:
+                <p style="color:red;"> Giải tích</p>
+                Tiết: 4-6
+                <p style="color:blue;"> GV: Nguyễn Hữu Nhân</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>PM13:
+                <p style="color:red;">Nhập môn lập trình</p>
+                Tiết: 4-6
+                <p style="color:blue;">GV: Trần Phương Tuấn</p>
+            </td>
+            <td></td>
+
+        </tr>
+        <tr>
+            <td>7-9</td>
+            <td>B37:
+                <p style="color:red;">Nhập môn công nghệ thông tin</p>
+                Tiết: 9-10
+                <p style="color:blue;">GV: Thái Thị Thanh Thảo</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>B37:
+                <p style="color:red;">Nhập môn lập trình</p>
+                Tiết: 7-9
+                <p style="color:blue;">GV: Tiếu Phùng Mai Sương</p>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10-12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>13-15</td>
+            <td></td>
+            <td>B21:
+                <p style="color:red;">Toán rời rạc</p>
+                Tiết: 13-15
+                <p style="color:blue;">GV: Tôn Quang Toại</p>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+
+    </table>
+
+
+
+</body>
+
+</html>
