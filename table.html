@@ -328,6 +328,28 @@
         <!-- End Example Code -->
       </body>
     </html>
+    <!doctype html>
+<script>
+    // Lấy thẻ body của trang
+var body = document.querySelector('body');
+
+// Đặt màu nền xám
+body.style.backgroundColor = '#f2f2f2'; // Mã màu xám
+
+// Lặp qua tất cả các phần tử trên trang và đặt màu nền xám cho chúng
+var elements = document.querySelectorAll('*');
+for (var i = 0; i < elements.length; i++) {
+  elements[i].style.backgroundColor = '#f2f2f2'; // Mã màu xám
+}
+
+// Đặt màu chữ tương phản để đảm bảo đọc được
+body.style.color = '#333'; // Mã màu đen
+
+// Lặp qua tất cả các phần tử và đặt màu chữ đen
+for (var i = 0; i < elements.length; i++) {
+  elements[i].style.color = '#333'; // Mã màu đen
+}
+</script>
     
     
 
@@ -366,7 +388,9 @@
             <div class="col"><button type="button" class="btn btn-light"onclick="selectDay('sunday')">Show sunday</button>
             </div>
           </div>
+          
         </div>
+        
         
         <!-- End Example Code -->
       </body>
