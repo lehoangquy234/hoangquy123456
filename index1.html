@@ -7,45 +7,36 @@
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
+    
   </head>
   <body class="p-3 m-0 border-0 bd-example m-0 border-0">
-
+   
     <!-- Example Code -->
     <form class="row g-3 needs-validation" novalidate="">
         <div class="col-md-3">
-
+         
           <input type="text" class="form-control" id="names" value="first name" required="">
-
+          
         </div>
         <div class="col-md-3">
-
+          
           <input type="text" class="form-control" id="names" value="last name" required="">
         </div>
           <div class="col-md-2">
-            <button type="button" class=" btn btn-primary" onclick="resign(document.getElementById('names').value)">resign </button>
+            <button type="button" class="btn btn-primary" onclick="resign(document.getElementById('names').value)">resign </button>
           </div>
-          <style>
-           .btn-primary {
-               background-color: yellow;
-               border-color: yellow;
-}
-            </style>
-            <style>
-              .btn-primary {
-              color: black;
-                           }
-            </style>
-            <style>
-              .btn-primary {
-                border-radius: 0;
-              }
-            </style>
-          
-
+         
       <script src="firestore.js">
+         function resign(names)
+              {
+    
+               alert("hello " + names);
+                return names;
+              }
 
       </script> 
+
+      
    
        
     
