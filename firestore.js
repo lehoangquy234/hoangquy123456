@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+// import firebase from 'firebase/app';
+// import 'firebase/firestore';
 
 
 var firebaseConfig = {
@@ -12,7 +12,7 @@ var firebaseConfig = {
     appId: "1:616270824990:web:40c8b177c6b9729cb5110f",
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  // firebase.initializeApp(firebaseConfig);
   document = { Names: value };
   collection = [{ firstname: quy  }, { lastname: le }];
   const db = firebase.firestore();
@@ -26,5 +26,11 @@ var firebaseConfig = {
     }));
   //   console.log("All data in 'lehoangquy' collection", data);
   // });
+  function resign(names)
+{
+    
+    alert("hello " + names);
+    return names;
+}
  
 
