@@ -3,38 +3,56 @@ import { initializeApp, } from 'firebase/app';
 import { getAuth, signInWithRedirect, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyBhhC2wXY-ATpOoG3aKHqhuwShbbQxeFX0",
-  authDomain: "myproject-b342c.firebaseapp.com",
-  projectId: "myproject-b342c",
-  storageBucket: "myproject-b342c.appspot.com",
-  messagingSenderId: "906406743938",
-  appId: "1:906406743938:web:8b63555ec6a50206a0899b"
+  // apiKey: "AIzaSyDpLmM79mUqbMDBexFtOQOkSl0glxCW_ds",
+  // authDomain: "lfasdfkjkjlkjl.firebaseapp.com",
+  // databaseURL: "https://lfasdlkjkjlkjl.firebaseio.com",
+  // projectId: "lfasdlkjkjlkjl",
+  // storageBucket: "lfasdlkjkjlkjl.appspot.com",
+  // messagingSenderId: "616270824980",
+  // appId: "1:616270824990:web:40c8b177c6b9729cb5110f",
+  apiKey: "AIzaSyBzsTmZO6gB1H3QcQB7Q5KCdfTxM_snovk",
+  authDomain: "quydp123-1cb9d.firebaseapp.com",
+  projectId: "quydp123-1cb9d",
+  storageBucket: "quydp123-1cb9d.appspot.com",
+  messagingSenderId: "770784304422",
+  appId: "1:770784304422:web:b5c161890cc4e04f1335e7",
+  measurementId: "G-JG7HSGSW5T"
+
 };
 
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+
+const db = getFirestore(app);
+const querySnapshot = await getDocs(collection(db, "users"));
+querySnapshot.forEach((doc) => {
+  console.log(doc.data());
+});
 
 
-// This will trigger a full page redirect away from your app
+// const auth = getAuth(app);
+// const provider = new GoogleAuthProvider();
 
-// After returning from the redirect when your app initializes you can obtain the result
-const result = await getRedirectResult(auth);
-if (result) {
-  // This is the signed-in user
-  const user = result.user;
-  // This gives you a Facebook Access Token.
-  const credential = GoogleAuthProvider.credentialFromResult(auth, result);
-  const token = credential.accessToken;}
- else {
-  await signInWithRedirect(auth, provider);
-}
-// firstname = { string: quy }
-// lastname = {string: le}
-// collection = [{ firstname: 123 }, { lastname: 1234 }] 
 
+// // This will trigger a full page redirect away from your app
+
+// // After returning from the redirect when your app initializes you can obtain the result
+// const result = await getRedirectResult(auth);
+// if (result) {
+//   // This is the signed-in user
+//   // const user = result.user;
+//   // // This gives you a Facebook Access Token.
+//   // const credential = GoogleAuthProvider.credentialFromResult(auth, result);
+//   // const token = credential.accessToken;
+//   const db = getFirestore(app);
+//   const querySnapshot = await getDocs(collection(db, "users"));
+//   querySnapshot.forEach((doc) => {
+//     console.log(`${doc.id} => ${doc.data()}`);
+//   });
+// } else {
+//   await signInWithRedirect(auth, provider);
+// }
 //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 // signInWithRedirect(auth, provider)
 //   .then((result) => {
