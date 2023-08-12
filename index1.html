@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype htnbmml>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,26 +15,26 @@
     <form class="row g-3 needs-validation" novalidate="">
         <div class="col-md-3">
          
-          <input type="text" class="form-control" id="names" value="first name" required="">
+          <input type="text" class="form-control" id="Names" value="first name" required="">
           
         </div>
         <div class="col-md-3">
           
-          <input type="text" class="form-control" id="names" value="last name" required="">
+          <input type="text" class="form-control" id="Names" value="last name" required="">
         </div>
           <div class="col-md-2">
-            <button type="button" class="btn btn-primary" onclick="resign(document.getElementById('names').value)">resign </button>
+            <button type="button" class="btn btn-primary" onclick="resign(document.getElementById('Names').value)">print </button>
           </div>
          
-      <script src="firestore.js">
-         function resign(names)
+      <script src="js/storage/firestore.js">
+         function resign(Names)
               {
     
-               alert("hello " + names);
-                return names;
+               alert("hello " + Names);
+                return Names;
               }
 
-      </script> 
+     
 
       
    

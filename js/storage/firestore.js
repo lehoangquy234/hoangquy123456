@@ -1,17 +1,17 @@
 import { initializeApp, } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+// import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import { getAuth, signInWithRedirect, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyDpLmM79mUqbMDBexFtOQOkSl0glxCW_ds",
-  authDomain: "lfasdfkjkjlkjl.firebaseapp.com",
-  databaseURL: "https://lfasdlkjkjlkjl.firebaseio.com",
-  projectId: "lfasdlkjkjlkjl",
-  storageBucket: "lfasdlkjkjlkjl.appspot.com",
-  messagingSenderId: "616270824980",
-  appId: "1:616270824990:web:40c8b177c6b9729cb5110f",
-
+  apiKey: "AIzaSyBhhC2wXY-ATpOoG3aKHqhuwShbbQxeFX0",
+  authDomain: "myproject-b342c.firebaseapp.com",
+  projectId: "myproject-b342c",
+  storageBucket: "myproject-b342c.appspot.com",
+  messagingSenderId: "906406743938",
+  appId: "1:906406743938:web:8b63555ec6a50206a0899b"
 };
+
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -27,10 +27,14 @@ if (result) {
   const user = result.user;
   // This gives you a Facebook Access Token.
   const credential = GoogleAuthProvider.credentialFromResult(auth, result);
-  const token = credential.accessToken;
-} else {
+  const token = credential.accessToken;}
+ else {
   await signInWithRedirect(auth, provider);
 }
+// firstname = { string: quy }
+// lastname = {string: le}
+// collection = [{ firstname: 123 }, { lastname: 1234 }] 
+
 //provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 // signInWithRedirect(auth, provider)
 //   .then((result) => {
@@ -91,7 +95,7 @@ if (result) {
 //   id: doc.id,
 //   ...doc.data(),
 // }));
-  //   console.log("All data in 'lehoangquy' collection", data);
-  // });
+//     console.log("All data in 'lehoangquy' collection", data);
+//   });
 
 
