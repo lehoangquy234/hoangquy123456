@@ -20,15 +20,19 @@ var firebaseConfig = {
 
 };
 
+async function main() {
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const querySnapshot = await getDocs(collection(db, "users"));
+  querySnapshot.forEach((doc) => {
+    console.log(doc.data());
+  });
+}
 
-const db = getFirestore(app);
-const querySnapshot = await getDocs(collection(db, "users"));
-querySnapshot.forEach((doc) => {
-  console.log(doc.data());
-});
+main();
+
 
 
 // const auth = getAuth(app);
