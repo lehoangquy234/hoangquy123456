@@ -3,23 +3,53 @@
 <head>
   <meta charset="utf-8">
   <title>Quy</title>
-</head>
-<body>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
+</head>
 <div class="container">
   <form id="registrationForm">
-    <div class="form-group">
-      <label for="ho">Ho:</label>
-      <input type="text" class="form-control" id="ho" name="ho">
+    <div class="col-md-3">
+         
+      <input type="text" class="form-control" id="Firstnames" value="firstname" required="">
+      
     </div>
-    <div class="form-group">
-      <label for="ten">Ten:</label>
-      <input type="text" class="form-control" id="ten" name="ten">
+    <div class="col-md-3">
+      
+      <input type="text" class="form-control" id="Lastnames" value="lastname" required="">
     </div>
-    <button type="button" class="btn btn-primary" id="submitBtn">dang ki</button>
+    
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary submit-user">submit</button>
+    </div>
+   
   </form>
 </div>
+<caption>List of users</caption>
+<table class="table" id="table-user">
+  <thead>
+    <tr>      
+      <th> FirstName</th>
+      <th >LastName</th>      
+    </tr>    
+  </thead>
+</table>
+<!-- <table> 
+  <tr> 
+    <td><input type="button" value="Add Row" onclick="addRows()" /></td> 
+  </tr>  
+</table>  -->
 
-<script type="module" src="/js/index.js"></script>
+
+<script type="module" src="/js/index.js">
+</script>
+<!-- <script type="module">
+  import { greet } from "/js/index.js";
+  module.greet = greet;
+</script> -->
 </body>
 </html>
