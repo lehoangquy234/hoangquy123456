@@ -6,20 +6,19 @@ function addRows(user){
   var rowCount = table.rows.length;
   var cellCount = table.rows[0].cells.length; 
   var row = table.insertRow(rowCount);
-  for(var i =0; i < cellCount; i++){
-    var cell = 'cell'+i;
-    cell = row.insertCell(i);
-    cell.innerHTML=user.FirstName;
-  if(i =1)
-  {
-    cell=row.insertCell(i);
-    cell.innerHTML=user.LastName;
-  }
 
-    
-    
-       
-   
+  for (let i = 0; i < cellCount; i++) {
+    const cell = row.insertCell(i);
+
+    if (i === 0) {
+      cell.innerHTML = user.FirstName;
+    }
+    else if (i === 1) {
+      cell.innerHTML = user.LastName;
+    }
+    else if (i === 2) {
+      cell.innerHTML = `<button type="button" class="btn btn-primary submit-user">DELETE</button>`;
+    }
   }
 }
 
